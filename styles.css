@@ -1,0 +1,60 @@
+html, body {
+	height: 100%;
+}
+
+.game1 {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.game1 .table  {
+	display: flex;
+	width: 90vw;
+	height: 90vw;
+	max-width: 90vh;
+	max-height: 90vh;
+	flex-wrap: wrap;
+	background: #eee;
+	margin: auto;
+}
+.game1 .cell {
+	width: 33.33%;
+	width: 33.33%;
+	cursor: pointer;
+	box-sizing: border-box;
+	border: 1px solid #000;
+	position: relative;
+}
+.game1 .cell.t1:before {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	width: 110%;
+	border-top: 3px solid #000;
+	content: '';
+	transform: rotate(45deg);
+	transform-origin: 0 0;
+}
+.game1 .cell.t1:after {
+	position: absolute;
+	right: 10%;
+	top: 10%;
+	width: 110%;
+	border-top: 3px solid #000;
+	content: '';
+	transform: rotate(-45deg);
+	transform-origin: 100% 0;
+}
+.game1 .cell.t2:before {
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	top: 10%;
+	bottom: 10%;
+	border: 3px solid #000;
+	content: '';
+	border-radius: 50%;
+}
+.game1 .cell.checked {
+	cursor: auto;
+}
