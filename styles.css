@@ -16,6 +16,89 @@ html, body {
 	flex-wrap: wrap;
 	background: #eee;
 	margin: auto;
+	position: relative;
+}
+.game1 .table.win1:before {
+	position: absolute;
+	left: 3%;
+	width: 0;
+	top: 16.4%;
+	border-top: 7px solid #f00;
+	content: '';
+	z-index: 1;
+	transition: 0.3s;
+}
+.game1 .table.win1.go:before {
+	width: 94%;
+}
+.game1 .table.win2:before {
+	position: absolute;
+	top: 3%;
+	height: 0;
+	right: 16.4%;
+	border-left: 7px solid #f00;
+	content: '';
+	z-index: 1;
+	transition: 0.3s;
+}
+.game1 .table.win2.go:before {
+	height: 94%;
+}
+.game1 .table.win3:before {
+	position: absolute;
+	top: 3%;
+	height: 0;
+	left: 16.4%;
+	border-left: 7px solid #f00;
+	content: '';
+	z-index: 1;
+	transition: 0.3s;
+}
+.game1 .table.win3.go:before {
+	height: 94%;
+}
+.game1 .table.win4:before {
+	position: absolute;
+	left: 3%;
+	width: 0;
+	bottom: 16.4%;
+	border-top: 7px solid #f00;
+	content: '';
+	z-index: 1;
+	transition: 0.3s;
+}
+.game1 .table.win4.go:before {
+	width: 94%;
+}
+.game1 .table.win5:before {
+	position: absolute;
+	left: 3%;
+	width: 0;
+	top: 3%;
+	border-top: 7px solid #f00;
+	content: '';
+	z-index: 1;
+	transition: 0.3s;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+}
+.game1 .table.win5.go:before {
+	width: 133%;
+}
+.game1 .table.win6:before {
+	position: absolute;
+	right: 3%;
+	width: 0;
+	top: 3%;
+	border-top: 7px solid #f00;
+	content: '';
+	z-index: 1;
+	transition: 0.3s;
+    transform: rotate(-45deg);
+    transform-origin: 100% 100%;
+}
+.game1 .table.win6.go:before {
+	width: 133%;
 }
 .game1 .cell {
 	width: 33.33%;
