@@ -4,19 +4,22 @@
     // GAME1 START
 
     $(document).on('click', '.game1 .table:not(.go) .cell:not(.checked)', function(){
-        let turn = $(this).parent().attr('data-turn');
+        let $parent = $(this).parent('.table'),
+            turn = $parent.attr('data-turn'),
+            checkedCount = $(this).siblings('.checked').length + 1;
 
         $(this).addClass('checked');
 
         if ( turn == 1 ) {
-            $(this).addClass('t1');
-            $(this).parent().attr('data-turn', 2);
+            changeTurn(2, 't1', $(this), $parent);
         } else {
-            $(this).addClass('t2');
-            $(this).parent().attr('data-turn', 1);
+            changeTurn(1, 't2', $(this), $parent);
         }
-
-        checkWin();
+        if ( checkedCount == 9 ) {
+            checkWin(true);
+        } else if ( checkedCount >= 5 ) {
+            checkWin(false);
+        }
     });
 
     function checkWin(){
@@ -54,6 +57,11 @@
         setTimeout( () => {
             $('.game1 .table').addClass('go');
         }, 50);
+    }
+
+    function changeTurn(turn, cls, $block, $blockParent) {
+        $block.addClass(cls);
+        $blockParent.attr('data-turn', turn);
     }
 
     // GAME1 END
