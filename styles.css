@@ -16,6 +16,7 @@ html, body {
 	flex-wrap: wrap;
 	background: #eee;
 	margin: auto;
+	border: 1px solid #000;
 	position: relative;
 }
 .game1 .table.win1:before {
